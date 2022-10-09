@@ -113,6 +113,9 @@ namespace NOA_TRIP.ViewModel
         }
         private void Irlistapaises()
         {
+            var popup = new Listapaises();
+            popup.BindingContext = this;
+
             MostrarPaises();
             PopupNavigation.Instance.PushAsync(new Listapaises());
         }
