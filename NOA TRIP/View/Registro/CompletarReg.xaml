@@ -5,6 +5,7 @@
              Visual="Material"
              NavigationPage.HasNavigationBar="False"
              xmlns:svg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    
     <StackLayout BackgroundColor="White" 
                  Padding="15">
         <Label Text="Completa tu informacion."
@@ -43,6 +44,9 @@
                                         Margin="5"/>
                     <Image Source="https://cdn-icons-png.flaticon.com/512/32/32195.png" 
                            HeightRequest="9"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Irpaisescommand}"/>
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Frame>
             <Frame HorizontalOptions="FillAndExpand"

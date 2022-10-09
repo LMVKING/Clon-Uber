@@ -5,6 +5,13 @@
              NavigationPage.HasNavigationBar="False"
              xmlns:svg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              xmlns:popups="http://rotorgames.com">
+    <popups:PopupPage.Animation>
+        <popups:MoveAnimation PositionIn="Bottom"
+                              PositionOut="Bottom"
+                              DurationIn="400"
+                              DurationOut="300"
+                              HasBackgroundAnimation="True"/>
+    </popups:PopupPage.Animation>
     <ContentPage.Resources>
         <Style TargetType="BoxView"
                    x:Key="SeparadorBoxview">
