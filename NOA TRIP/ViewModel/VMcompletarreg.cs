@@ -13,6 +13,8 @@ using Twilio.Types;
 using NOA_TRIP.View;
 using System.Security.Cryptography.X509Certificates;
 using NOA_TRIP.Datos;
+using Rg.Plugins.Popup.Services;
+using NOA_TRIP.View.Reutilizables;
 
 namespace NOA_TRIP.ViewModel
 {
@@ -109,8 +111,14 @@ namespace NOA_TRIP.ViewModel
             var funcion = new Dpaises();
             SelectpaisDesault = funcion.MostrarpaisesXpais("Dominican Republic");
         }
+        private void Irlistapaises()
+        {
+            MostrarPaises();
+            PopupNavigation.Instance.PushAsync(new Listapaises());
+        }
         #endregion
         #region COMANDOS
+        public ICommand Irpaisescommand => new Command(Irlistapaises);
         public ICommand Siguientecommand => new Command(EnviarSMS);
         //public ICommand Pmostrarpaisescommand => new Command(MostrarPaises);
         public ICommand Ircrearcuentacommand => new Command(Ircrearcuenta);
