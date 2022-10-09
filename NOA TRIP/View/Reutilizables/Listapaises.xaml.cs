@@ -21,7 +21,6 @@ namespace NOA_TRIP.View.Reutilizables
             parametros.Name = "-";
             parametros.Email = "-";
             InitializeComponent();
-            BindingContext = new VMcompletarreg(Navigation, parametros);
         }
     }
 } 
