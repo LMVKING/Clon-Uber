@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "270970558645",
+    "project_id": "noatrip-b6570",
+    "storage_bucket": "noatrip-b6570.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270970558645:android:2a40aac32836bc321b86fc",
+        "android_client_info": {
+          "package_name": "com.noasoftware.noa_trip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270970558645-g62fj6dbmm4q4thv21d1dr225osrr4n9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.noasoftware.noa_trip",
+            "certificate_hash": "366578b5228db4c0407368067e2dae6b2d6dd775"
+          }
+        },
+        {
+          "client_id": "270970558645-jv98pt6l0g1h5rs15op49j46sh181c48.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmaUW-YRem7GgLPENESSywyyjfTuHGAiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270970558645-jv98pt6l0g1h5rs15op49j46sh181c48.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NOA_TRIP.View.Registro.DigitarCodigo"
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls">
+    <StackLayout 
+        Padding="20"
+        BackgroundColor="White"
+        Spacing="20">
+        <Label Text="Ingrese el codigo de 4 digitos que se te envio al 8299643035"
+               FontSize="Medium"
+               TextColor="Black"/>
+        <Grid ColumnDefinitions="*,*">
+            <material:MaterialCodeEntry Length="4"
+                                        Keyboard="Numeric"
+                                        FontSize="20"
+                                        BackgroundColor="#f6f6f6"
+                                        BorderColor="Azure"/>
+
+        </Grid>
+        <Frame CornerRadius="30"
+               HorizontalOptions="Start"
+               Padding="20,8"
+               HasShadow="False"
+               BackgroundColor="#f6f6f6">
+            <Label Text="N0 recibi el codigo 0:30"
+                   />
+        </Frame>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="EndAndExpand">
+            <Frame CornerRadius="35" BackgroundColor="#EEEEEE"
+                   HasShadow="False"
+                   VerticalOptions="Center">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+                       HeightRequest="30"/>
+            </Frame>
+            <Frame HorizontalOptions="EndAndExpand"
+                  Margin="0, 20"
+                   BackgroundColor="Black"
+                   HasShadow="False"
+                   CornerRadius="30"
+                   Padding="15">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Siguiente"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    TextTransform="Uppercase"
+                    FontAttributes="Bold"
+                    />
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/545/545783.png"
+                     HeightRequest="30"
+                     HorizontalOptions="EndAndExpand" Margin="0,0,18,0"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Siguientecommand}"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

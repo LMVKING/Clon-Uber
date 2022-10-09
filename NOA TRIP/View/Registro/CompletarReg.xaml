@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NOA_TRIP.View.Registro.CompletarReg"
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:svg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <StackLayout BackgroundColor="White" 
+                 Padding="15">
+        <Label Text="Completa tu informacion."
+               FontSize="Medium"
+               TextColor="Black"/>
+        <Grid ColumnDefinitions="*,*">
+            <Frame BackgroundColor="#eeeeee"
+                   HasShadow="False"
+                   CornerRadius="10"
+                   Padding="5"
+                   Margin="10,0,20,0">
+                <Entry Placeholder="Ingresa tu nombre"
+                       BackgroundColor="#EEEEEE"
+                       Text="{Binding _googleuserRecibe.Name}"/>
+            </Frame>
+            <Frame Margin="10,0,10,0" BackgroundColor="#eeeeee"
+                   HasShadow="False"
+                   CornerRadius="10"
+                   Padding="5"
+                   Grid.Column="1">
+                <Entry Placeholder="Ingresa tu Apellido"
+                       BackgroundColor="#EEEEEE"
+                       Text="{Binding _googleuserRecibe.Apellido}"/>
+            </Frame>
+        </Grid>
+        <StackLayout Orientation="Horizontal"
+                     Margin="0,9,0,0">
+            <Frame BackgroundColor="#eeeeee"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   Margin="10,0,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <svg:SvgCachedImage Source="{Binding SelectpaisDesault.Iconourl}"
+                                        HeightRequest="26"
+                                        WidthRequest="26"
+                                        Margin="5"/>
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/32/32195.png" 
+                           HeightRequest="9"/>
+                </StackLayout>
+            </Frame>
+            <Frame HorizontalOptions="FillAndExpand"
+                   Padding="10,5"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   BackgroundColor="#eeeeee">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding SelectpaisDesault.CodigoPais, StringFormat='+{0}'}"
+                           TextColor="Black"
+                           FontSize="Medium"
+                          VerticalOptions="Center"/>
+                    <Entry BackgroundColor="#eeeeee"
+                           Placeholder="Numero de Movil"
+                           HorizontalOptions="FillAndExpand"
+                           Keyboard="Telephone"
+                           Text="{Binding Txtnumero}"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="EndAndExpand">
+            <Frame CornerRadius="35" BackgroundColor="#EEEEEE"
+                   HasShadow="False"
+                   VerticalOptions="Center">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/271/271220.png"
+                       HeightRequest="30"/>
+            </Frame>
+            <Frame HorizontalOptions="EndAndExpand"
+                  Margin="0, 20"
+                   BackgroundColor="Black"
+                   HasShadow="False"
+                   CornerRadius="30"
+                   Padding="15">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Siguiente"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    TextTransform="Uppercase"
+                    FontAttributes="Bold"
+                    />
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/545/545783.png"
+                     HeightRequest="30"
+                     HorizontalOptions="EndAndExpand" Margin="0,0,18,0"
+                     />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Siguientecommand}"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+       
+</ContentPage>

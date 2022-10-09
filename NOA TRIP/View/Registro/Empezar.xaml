@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NOA_TRIP.View.Registro.Empezar"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid BackgroundColor="#276EF1">
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         Spacing="80">
+              <Label Text="NOA TRIP"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="40"/>
+              <Image Source="https://cdn-icons-png.flaticon.com/512/1170/1170459.png"
+                   HorizontalOptions="Center"
+                   HeightRequest="150"/>
+              <Label Text="VIAJA SEGURO"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="35"
+                   HorizontalTextAlignment="Center"/> </StackLayout>
+              <Grid VerticalOptions="EndAndExpand"
+                  Margin="20">
+                 <Button Text="Empezar"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    CornerRadius="10"
+                    TextTransform="None"
+                    FontAttributes="Bold"
+                         Command="{Binding Ircrearcuentacommand}"/>
+                 <Image Source="https://cdn-icons-png.flaticon.com/512/545/545783.png"
+                     HeightRequest="30"
+                     HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+             </Grid>
+</StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NOA_TRIP.View.MenuPrincipal.Vmenuprincipal"
+             xmlns:MAPA1="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Padding="20" BackgroundColor="White"
+                 Spacing="20">
+        <Image Source="https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
+               HorizontalOptions="End"
+               HeightRequest="18"
+               BackgroundColor="White"
+               />
+        <Frame Padding="0" CornerRadius="10"
+               HasShadow="False"
+               BackgroundColor="#e3ddf2">
+            <Grid ColumnDefinitions="auto,auto">
+                <StackLayout VerticalOptions="Center"
+                             Padding="30">
+                    <Label Text="¿Listo? ¡Vamos a Ello!"
+                           TextColor="Black"
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Viajar con NOA TRIP"
+                               VerticalOptions="Center"
+                               TextColor="Black"
+                               FontSize="Body"
+                               FontAttributes="Bold"/>
+                        <Image  Source="https://cdn-icons-png.flaticon.com/512/545/545783.png" 
+                       HeightRequest="30"
+                                VerticalOptions="Center"/>
+
+                    </StackLayout>
+                </StackLayout>
+                <Image Grid.Column="1"
+                       Source="https://uberblogapi.10upcdn.com/1080x540/filters:format(webp)/blogapi.uber.com/wp-content/uploads/2018/08/PA_R0_Descubre-co%CC%81mo-funciona-Uber-y-prepa%CC%81rate-para-tu-primer-viaje-1-1-1024x512.png"
+                       HeightRequest="100"
+                       Aspect="AspectFill"
+                       />
+
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="#ededed"
+               CornerRadius="10"
+               HasShadow="False"
+               Padding="15,10">
+            <Label Text="¿A donde Vamos?"
+                   FontSize="Large"
+                   TextColor="Black"
+                   />
+        </Frame>
+        <StackLayout Orientation="Horizontal">
+            <Frame BackgroundColor="#EEEEEE" 
+                   HasShadow="False" 
+                   CornerRadius="30"
+                   Padding="10">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/929/929495.png"
+                       HeightRequest="15"/> 
+            </Frame>
+            <Label Text="Elegir un Favorito"
+                   VerticalOptions="Center"
+                   FontSize="Subtitle"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            <Image Source="https://cdn-icons-png.flaticon.com/512/271/271228.png"
+                   HeightRequest="20"
+                   HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Frame BackgroundColor="#EEEEEE" 
+                   HasShadow="False" 
+                   CornerRadius="30"
+                   Padding="10">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/447/447031.png"
+                       HeightRequest="15"/>
+            </Frame>
+            <Label Text="Establecer Destino en el Mapa"
+                   VerticalOptions="Center"
+                   FontSize="Subtitle"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            <Image Source="https://cdn-icons-png.flaticon.com/512/271/271228.png"
+                   HeightRequest="20"
+                   HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <Label Text="A tu alrededor"
+               TextColor="Black"
+               FontSize="Medium"
+               FontAttributes="Bold"/>
+        <Frame VerticalOptions="FillAndExpand"
+               CornerRadius="20"
+               Padding="0"
+               HasShadow="False">
+            <MAPA1:Map />
+        </Frame>
+    </StackLayout>
+</ContentPage>
